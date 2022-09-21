@@ -114,7 +114,7 @@ const Viewtolls = () =>
     }
     return(
         <><div className="home-header-main">
-            <div className="home-header-first" style={{ 'width': '10%' }}>
+            <div className="home-header-first" style={{'marginRight':'2%'}}>
                 <p style={{ 'fontWeight': 'bold' }}>Tollgate list</p>
             </div>
             <div className="home-header-third" style={{'marginRight':'40%'}}>
