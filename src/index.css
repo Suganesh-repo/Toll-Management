@@ -201,18 +201,22 @@ table{
 }
 th,td{
   text-align: left;
-  padding: 5px;
+}
+th{
+  padding: 5px 0px 5px 0px;
 }
 thead{
   background-color: rgb(235, 240, 243);
 }
 td{
-  padding : 15px;
+  padding : 15px  0px 15px 0px;
   font-weight: 500;
   font-size: small;
+  text-align: left;
 }
 tr{
   border-bottom: 1px solid lightgray;
+  text-align: left;
 }
 .item p{
   padding : 0px 5px 0px 5px;
