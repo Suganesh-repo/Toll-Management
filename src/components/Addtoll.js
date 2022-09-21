@@ -7,34 +7,32 @@ import Button from './Button';
 const Addtoll = ({closeaddt}) =>
 {
     const[toll,updtoll] = useState('');
-    // const[vehicletype,updvehtype] = useState('');
-    // const[singlejourney,updsingle] = useState(0);
-    // const[returnjourney,updreturn] = useState(0);
+    const[car,upcar] = useState(false);
+    const[lcv,uplcv] = useState(false);
+    const[truck,uptruck] = useState(false);
+    const[heavyveh,upheavyveh] = useState(false);
     const [state, setState] = useState([]);
     useEffect(()=>{
 
     },[localStorage.getItem("tolls")])
-    // useEffect(()=>
-    // {
-    //     const toll_val = toll
-    //     if(state.length === 4)
-    //     {
-    //         localStorage.setItem(toll_val,JSON.stringify(state));
-           
-    //     }
-    // },[state],toll)
-    // const[state,setState] = useState(new Map());
-//     useEffect((toll,vehicletype,singlejourney,returnjourney,state) => {
-//     if(toll !== '' && vehicletype !== '' && singlejourney !== 0 && returnjourney !== 0)
-//     {
-//         const nt = {toll,vehicletype,singlejourney,returnjourney};
-//         setState([...state,nt]);
-//         updvehtype('');
-//         updreturn(0);
-//         updsingle(0);
-//     }
-// });
+    
    const onaddone = (t) =>{
+    if(t.vehicletype === "Car/Jeep/Van")
+    {
+        upcar(true);
+    }
+    else if(t.vehicletype === "LCV")
+    {
+        uplcv(true);
+    }
+    else if(t.vehicletype === "Truck/Bus")
+    {
+        uptruck(true);
+    }
+    else
+    {
+        upheavyveh(true);
+    }
     setState(state.filter((state) => state.vehicletype !== t.vehicletype))
     console.log(state)
     const id = Math.floor(Math.random() * 10000)+1;
@@ -42,12 +40,10 @@ const Addtoll = ({closeaddt}) =>
     setState(st => [...st,nt]);
    }
   
-//    const onaddtwo = (t) => {
-//     const id = Math.floor(Math.random() * 10000)+1;
-//     const nt = {id,toll,...t};
-//     setState([...state,nt]);
-//    }
+
     const onsub = () =>{
+        if(car === true && truck === true && lcv === true && heavyveh === true)
+        {
         const items = JSON.parse(localStorage.getItem('tolls'));
         const toll_value = toll;
         const arr = []
@@ -61,6 +57,10 @@ const Addtoll = ({closeaddt}) =>
         localStorage.setItem(toll_value,JSON.stringify(state));
         localStorage.setItem('tolls',JSON.stringify(arr));
         alert("Toll Added Successfully");
+    }
+    else{
+        alert("Vehicle Type should not be repetitive. Include all types to add toll");
+    }
     }
     return (
         <div className="popupstyle">
