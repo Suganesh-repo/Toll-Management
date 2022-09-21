@@ -337,7 +337,7 @@ const Addvehicle = ({closeaddv}) =>
 
     }
     return(
-        <div className="popupstyle" style={{'width':'25%','height':'55%'}}>
+        <div className="popupstyle" style={{'width':'25%','height':'58%'}}>
         <div className='popupchild' style={{'width':'80%'}}>
         <div className="head">
         <h4>Add new vehicle <i className="fa fa-window-close" style={{'float':'right','cursor':'pointer'}} aria-hidden="true" onClick={closeaddv} ></i></h4>
@@ -397,8 +397,9 @@ const Addvehicle = ({closeaddv}) =>
             </div>
             <input type="text" placeholder="Tariff Amount" className="tollheadnext" value={tariff} disabled required />
         </div>
+        <div style={{'paddingTop':'5%'}}>
         <Button st_name="btn" content="Add Entry"/>
-       
+        </div>
         </form>
          </div> 
     </div>
