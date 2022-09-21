@@ -56,6 +56,10 @@ const Addtoll = ({closeaddt}) =>
         }
         localStorage.setItem(toll_value,JSON.stringify(state));
         localStorage.setItem('tolls',JSON.stringify(arr));
+        upcar(false);
+        uptruck(false);
+        uplcv(false);
+        upheavyveh(false);
         alert("Toll Added Successfully");
     }
     else{
