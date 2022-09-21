@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.popupaddtoll
+{
+  background-color: rgba(128,128,128,0.5);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 130%;
+}
