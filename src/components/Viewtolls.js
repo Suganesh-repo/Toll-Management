@@ -111,6 +111,7 @@ const Viewtolls = () =>
         const t = listtoll.filter((i)=>suggesstion === i.toll);
         console.log(t);
         upup(t);
+        updsuggestion([]);
     }
     return(
         <><div className="home-header-main">
