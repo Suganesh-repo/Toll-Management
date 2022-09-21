@@ -337,7 +337,7 @@ const Addvehicle = ({closeaddv}) =>
 
     }
     return(
-        <div className="popupstyle" style={{'width':'25%'}}>
+        <div className="popupstyle" style={{'width':'25%','height':'55%'}}>
         <div className='popupchild' style={{'width':'80%'}}>
         <div className="head">
         <h4>Add new vehicle <i className="fa fa-window-close" style={{'float':'right','cursor':'pointer'}} aria-hidden="true" onClick={closeaddv} ></i></h4>
