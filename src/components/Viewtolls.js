@@ -120,7 +120,7 @@ const Viewtolls = () =>
             <div className="home-header-third" style={{'marginRight':'40%'}}>
                 <div className="search-bar">
                     <i className="icon fa fa-search"></i>
-                    <input className="input-text" type="text" value={text} onChange={(e) => onchangingtoll(e.target.value)} placeholder="Search Vehicle" />
+                    <input className="input-text" type="text" value={text} onChange={(e) => onchangingtoll(e.target.value)} placeholder="Search a toll" />
 
                 </div>
                 <div className="suggest" id="sug" style={{ 'display': 'none' }}>
