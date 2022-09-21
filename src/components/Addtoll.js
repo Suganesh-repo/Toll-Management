@@ -63,6 +63,10 @@ const Addtoll = ({closeaddt}) =>
         alert("Toll Added Successfully");
     }
     else{
+        upcar(false);
+        uptruck(false);
+        uplcv(false);
+        upheavyveh(false);
         alert("Vehicle Type should not be repetitive. Include all types to add toll");
     }
     }
